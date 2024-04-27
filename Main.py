@@ -31,6 +31,7 @@ note_menu_bg.grid(row=0, column=1, rowspan=8,columnspan=7, sticky=NSEW)
 note_count = 0
 pos_row = 0
 pos_col = 3
+notes_list = []
 class Note:
     def __init__(self, pos_row, pos_col) -> None:
         self.pos_row = pos_row
@@ -73,10 +74,6 @@ class Note:
 
 new_note_button = Button(mainframe, text='+', command=lambda: Note.createNote_Button(Note.note_counter()))
 new_note_button.grid(row=0, column=0, sticky=EW)
-
-delete_button = Button(mainframe, text='x', fg='red',command=lambda: Note.deleteNote_Button())
-delete_button.grid(row=1, column=0, sticky=EW)
-
 
 '''
 note1 = Canvas(mainframe, bg="grey")
